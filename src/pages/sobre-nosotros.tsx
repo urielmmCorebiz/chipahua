@@ -37,8 +37,8 @@ const AboutUs = () => {
               }}
             >
               Chipahua es una empresa mexicana con amplia experiencia en el ramo
-              del saneamiento ambienta, proporcionando servicios de limpieza en
-              diversos sectores tales:
+              del saneamiento ambiental, proporcionando servicios de limpieza en
+              diversos sectores, tales como:
               <br />
               <br />
               Comercial, industiral, corporativo y residencial, funcionando bajo

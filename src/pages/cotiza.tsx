@@ -11,17 +11,17 @@ const Cotiza = () => {
     // useState
     const [adviceName, setAdviceName] = useState("");
     const [adviceEmail, setAdviceEmail] = useState("");
-    const [adviceSubject, setAdviceSubject] = useState("");
+    const [adviceTel, setAdviceTel] = useState("");
     const [adviceMessage, setAdviceMessage] = useState("");
 
     const sendAdvice = (e: any) => {
         e.preventDefault();
-        if (!adviceSubject.trim() || !adviceMessage.trim()) {
+        if (!adviceTel.trim() || !adviceMessage.trim()) {
         } else {
             emailjs
                 .sendForm(
-                    "administraciónCEHF",
-                    `urieel.mmgmail.com`,
+                    "chipahua",
+                    `template_rr2qk6m`,
                     e.target,
                     "user_VGe2axNgQKXlEzuYyPuBl"
                 )
@@ -33,8 +33,11 @@ const Cotiza = () => {
                         console.log(error.text);
                     }
                 );
-            setAdviceSubject("");
+            console.log("enviado");
+            setAdviceTel("");
             setAdviceMessage("");
+            setAdviceEmail("");
+            setAdviceName("");
         }
     };
     return (
@@ -62,20 +65,20 @@ const Cotiza = () => {
                             <div className="container-inputs">
                                 <div className="input-group">
                                     <label>Email</label>
-                                    <input type="email" placeholder="Email" />
+                                    <input onChange={(event) => setAdviceEmail(event.target.value)} type="email" placeholder="Email" name="email" id="email" />
                                 </div>
                                 <div className="input-group">
                                     <label>Nombre</label>
-                                    <input type="text" placeholder="Nombre" />
+                                    <input onChange={(event) => setAdviceName(event.target.value)} type="text" placeholder="Nombre" name="name" id="name" />
                                 </div>
                                 <div className="input-group">
                                     <label>Teléfono de contacto</label>
-                                    <input type="text" placeholder="Teléfono de contacto" />
+                                    <input onChange={(event) => setAdviceTel(event.target.value)} type="text" placeholder="Teléfono de contacto" name="phone" id="phone" />
                                 </div>
                             </div>
                             <div className="input-group">
                                 <label>Mensaje</label>
-                                <textarea placeholder="Déjanos un mensaje" rows={5} />
+                                <textarea  onChange={(event) => setAdviceMessage(event.target.value)} placeholder="Déjanos un mensaje" name="mensaje" id="mensaje" rows={5} />
                             </div>
                             <div className="container-button-submit">
                                 <button type="submit">Enviar</button>
