@@ -1,22 +1,31 @@
-import { Navbar, Image, Link, Dropdown } from "@nextui-org/react";
+import { Navbar, Image, Link } from "@nextui-org/react";
+import NextLink from "next/link";
 
 const NavbarMenu = () => {
   const collapseItems = [
     {
       title: "Inicio",
-      href: "#",
+      href: "/",
     },
     {
       title: "Sobre nosotros",
-      href: "#sobre-nosotros",
+      href: "/sobre-nosotros",
     },
     {
       title: "Servicios",
-      href: "#servicios",
+      href: "/servicios",
     },
     {
-      title: "Contacto",
-      href: "#contacto",
+      title: "¿Por qué contratarnos?",
+      href: "/por-que-contratarnos",
+    },
+    {
+      title: "Cotiza",
+      href: "/cotiza",
+    },
+    {
+      title: "Trabaja con nosotros",
+      href: "/trabaja-con-nosotros",
     },
   ];
   return (
@@ -45,10 +54,12 @@ const NavbarMenu = () => {
         hideIn="xs"
         variant="highlight"
       >
-        <Navbar.Link href="#">Inicio</Navbar.Link>
-        <Navbar.Link href="#sobre-nosotros">Sobre nosotros</Navbar.Link>
-        <Navbar.Link href="#servicios">Servicios</Navbar.Link>
-        <Navbar.Link href="#contacto">Contacto</Navbar.Link>
+        <Navbar.Link href="/">Inicio</Navbar.Link>
+        <Navbar.Link href="/sobre-nosotros">Sobre nosotros</Navbar.Link>
+        <Navbar.Link href="/servicios">Servicios</Navbar.Link>
+        <Navbar.Link href="/por-que-contratarnos">¿Por qué contratarnos?</Navbar.Link>
+        <Navbar.Link href="/cotiza">Cotiza</Navbar.Link>
+        <Navbar.Link href="/trabaja-con-nosotros">Trabaja con nosotros</Navbar.Link>
       </Navbar.Content>
       <Navbar.Content
         css={{

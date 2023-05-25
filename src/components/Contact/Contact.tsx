@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Container, Text, Grid, Textarea } from "@nextui-org/react";
+import { Container, Text, Grid } from "@nextui-org/react";
 import emailjs from "emailjs-com";
+import GoogleMapComponent from "../Map/Map";
 
 const Contact = () => {
   // useState
@@ -45,8 +46,11 @@ const Contact = () => {
           Compártenos tus datos y nosotros te contactamos
         </Text>
       </Grid.Container>
-      <Grid.Container justify="center" alignItems="center">
-        <Grid xs={12} sm={12} justify="center">
+      <Grid.Container alignItems="center" justify="center">
+        <Grid md={6} xs={12}>
+          <GoogleMapComponent />
+        </Grid>
+        <Grid md={6} xs={12}>
           <form onSubmit={sendAdvice} className="form-group">
             <div className="container-inputs">
               <div className="input-group">

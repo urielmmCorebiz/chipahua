@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
 import Main from "@/components/Main/Main";
-import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
       </Head>
       <Layout>
         <Main />
-        <Contact />
         <Footer />
       </Layout>
     </>

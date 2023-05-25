@@ -76,13 +76,13 @@
     margin: 10px 0;
   }
   .form-group {
-    width: 50%;
+    width: 100%;
   }
 }
 .footer-section {
   align-items: center;
   background: inherit;
-  border-top: 3px solid #f38343;
+  border-top: 3px solid #e01803;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
